@@ -1,0 +1,379 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #c4b5fd,
+        #fbcfe8,
+        #fde68a
+    );
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    padding:40px 20px;
+}
+
+.background-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:.45;
+
+    z-index:-1;
+}
+
+.circle1{
+
+    width:250px;
+    height:250px;
+
+    background:#8b5cf6;
+
+    top:-70px;
+    left:-70px;
+}
+
+.circle2{
+
+    width:280px;
+    height:280px;
+
+    background:#ec4899;
+
+    bottom:-100px;
+    right:-100px;
+}
+
+.container{
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+header h1{
+
+    font-size:48px;
+
+    color:#4c1d95;
+
+    margin-bottom:10px;
+}
+
+header p{
+
+    color:#4b5563;
+
+    font-size:18px;
+}
+
+.card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.category-card h2,
+.quiz-card h2,
+.api-card h2{
+
+    margin-bottom:20px;
+
+    color:#4c1d95;
+}
+
+.category-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.category{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ede9fe;
+
+    color:#5b21b6;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.category:hover{
+
+    transform:translateY(-3px);
+}
+
+.active{
+
+    background:#7c3aed;
+
+    color:white;
+}
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+    color:#4c1d95;
+}
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:#e5e7eb;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+}
+
+#progressBar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    transition:.4s;
+}
+
+#question{
+
+    color:#1f2937;
+
+    margin-bottom:25px;
+
+    line-height:1.5;
+}
+
+#options{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+}
+
+.option{
+
+    background:#f8fafc;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:2px solid transparent;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.option:hover{
+
+    border-color:#8b5cf6;
+
+    transform:translateY(-2px);
+}
+
+.correct{
+
+    background:#dcfce7;
+
+    border-color:#22c55e;
+}
+
+.wrong{
+
+    background:#fee2e2;
+
+    border-color:#ef4444;
+}
+
+.buttons{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:flex-end;
+}
+
+button{
+
+    border:none;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(139,92,246,.3);
+}
+
+.result-card{
+
+    text-align:center;
+}
+
+.result-card h1{
+
+    font-size:60px;
+
+    color:#7c3aed;
+
+    margin:20px 0;
+}
+
+.hidden{
+
+    display:none;
+}
+
+.api-card{
+
+    text-align:center;
+}
+
+#joke{
+
+    margin:20px 0;
+
+    color:#374151;
+
+    line-height:1.7;
+
+    min-height:60px;
+}
+
+footer{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-top:30px;
+
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    header h1{
+
+        font-size:36px;
+    }
+
+    #options{
+
+        grid-template-columns:1fr;
+    }
+
+    .top{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .card{
+
+        padding:20px;
+    }
+
+    .category-buttons{
+
+        flex-direction:column;
+    }
+
+    button{
+
+        width:100%;
+    }
+
+}

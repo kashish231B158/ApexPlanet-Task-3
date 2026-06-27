@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>QuizVerse</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background-circle circle1"></div>
+<div class="background-circle circle2"></div>
+
+<div class="container">
+
+<header>
+
+<h1>QuizVerse</h1>
+
+<p>
+Interactive Quiz Application using HTML, CSS and JavaScript
+</p>
+
+</header>
+
+
+<!-- CATEGORY -->
+
+<section class="card category-card">
+
+<h2>Select Category</h2>
+
+<div class="category-buttons">
+
+<button class="category active"
+data-category="html">
+
+HTML
+
+</button>
+
+<button class="category"
+data-category="css">
+
+CSS
+
+</button>
+
+<button class="category"
+data-category="javascript">
+
+JavaScript
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- QUIZ -->
+
+<section class="card quiz-card">
+
+<div class="top">
+
+<div>
+
+Question
+
+<span id="questionNumber">
+
+1
+
+</span>
+
+/
+
+<span id="totalQuestions">
+
+5
+
+</span>
+
+</div>
+
+<div id="score">
+
+Score : 0
+
+</div>
+
+</div>
+
+<div class="progress">
+
+<div id="progressBar">
+
+</div>
+
+</div>
+
+<h2 id="question">
+
+Loading...
+
+</h2>
+
+<div id="options">
+
+</div>
+
+<div class="buttons">
+
+<button id="nextBtn">
+
+Next Question
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- RESULT -->
+
+<section
+class="card result-card hidden"
+id="resultCard">
+
+<h2>
+
+Quiz Completed
+
+</h2>
+
+<h1 id="finalScore">
+
+0/5
+
+</h1>
+
+<p id="message">
+
+Excellent Work!
+
+</p>
+
+<button id="restartBtn">
+
+Restart Quiz
+
+</button>
+
+</section>
+
+
+
+<!-- API -->
+
+<section class="card api-card">
+
+<h2>
+
+Programming Joke
+
+</h2>
+
+<p id="joke">
+
+Click the button to load a joke.
+
+</p>
+
+<button id="jokeBtn">
+
+Load Joke
+
+</button>
+
+</section>
+
+<footer>
+
+Developed by Kashish
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
